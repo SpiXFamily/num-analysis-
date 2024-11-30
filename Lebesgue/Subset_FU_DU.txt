@@ -1,0 +1,11 @@
+FU
+  FU_{0,S,id,lim}
+  FU_incr_seq
+  FU_union_{finite,seq}
+  FU_disj_{l,r}
+
+DU
+  DU_{equiv{,_def},0?,S?}
+  DU_incl_seq_l
+  DU_union_{finite{_incl{,'},},seq}
+  DU_disj_{finite,seq}{,'}

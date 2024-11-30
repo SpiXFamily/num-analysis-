@@ -1,0 +1,38 @@
+repeat_{1,2}
+{expand,trunc,mask,shift}
+  shift_0_{l?,r}
+  shift_{add,assoc}
+
+  subset_finite_ext{,'}
+incl_finite
+  incl_finite_{refl,antisym,trans}
+same_finite
+  same_finite_{refl?,sym,trans}
+{in,de}cr_finite
+  {in,de}cr_finite_{0,S,1,repeat2,le}
+  {in,de}cr_finite_{union,inter,diff}_compat_{l,r}
+disj_finite{,'}
+  disj_finite_equiv
+  disj_finite_{0,S,1,repeat_2,inter_{l,r}}
+  disj_finite'_x_inter_finite
+compl_finite
+  compl_finite_{ext,reg,invol}
+  {incl,same}_compl_finite{',}
+  {in,de}cr_compl_finite
+x_inter_finite
+  x_inter_finite_phi
+{union,inter}_finite
+  {union,inter}_finite_{ext,0,S,1,repeat_2,idem,monot}
+  union_finite_{,l}ub,inter_finite_{,g}lb
+  incl_{union,inter}_finite
+  distrib_{union,inter}_{union,inter}_finite_{l,r}
+  distrib_inter_union_finite
+  distrib_{union_finite_inter,inter_finite_union}_finite
+  {incr_union,decr_inter}_finite
+  disj_union_finite_{l,r}
+  union_finite_shift,shift_union_finite
+  incl_inter_union_finite
+  compl{,_finite}_{union,inter}_finite
+  diff_{union,inter}_finite{_{l,r},}
+partition_finite
+  partition_finite_inter{_{l,r},}

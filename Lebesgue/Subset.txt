@@ -1,0 +1,68 @@
+  subset_ext{,'}
+{empty,full}set
+{empty,full}
+  {emptyset_empty,fullset_full}?
+  {empty_emptyset,full_fullset}
+incl
+  incl_{refl,antisym,trans}
+  full_not_empty
+  {empty?,full}_incl?
+  incl_{empty,full?}
+same
+  same_{refl?,sym,trans}
+disj
+  disj_equiv_def
+  disj_{irrefl,sym}
+  disj_{empty?,full,monot}_{l,r}
+  incl_disj
+compl
+  compl_{empty,full,invol,reg}
+  {incl,same}_compl{',}
+  disj_incl_compl_{l,r}
+{union,inter}
+  {union,inter}_{assoc,comm,idem}
+  {union,inter}_{empty,full}_{l,r}
+  {empty_union,full_inter}
+  union_{ub_{l,r},lub},inter_{lb_{l,r},glb}
+  incl_{union,inter}
+  {union,inter}_{left,right,monot_{l,r}}
+  disj_{union,inter}_{l,r}
+  {union,inter}_compl_{l,r}
+  {incl,disj}_inter_union
+  compl_{union,inter}
+  distrib_{union,inter}_{union,inter}_{l,r}
+  distrib_{union_inter,inter_union}
+  disj_compl_{l,r}
+diff
+  diff_equiv_def_{union,inter}
+  {compl,inter,union}_equiv_def_diff
+  partition_diff_{l,r}
+  diff_monot_{l,r}
+  {disj,empty,full,compl}_diff
+  diff_{empty,full,compl}_{l,r}
+  diff_compl
+  diff_{union,inter}_{l,r}{,'}
+  union_diff_{l,r}
+  distrib_inter_diff_{l,r}
+  diff2_{l,r{,_inter}}
+  diff2{,_diag_{l,r},_cancel_left}
+sym_diff
+  sym_diff_equiv_def_{union,diff}
+  {union,inter}_equiv_def_sym_diff
+  diff_equiv_def_sym_diff_{union,inter}
+  sym_diff_{assoc,comm,inv}
+  sym_diff_{empty,full,eq_reg,compl}_{l,r}
+  sym_diff_compl
+  super_distrib_union_sym_diff{_{l,r},}
+  sub_distrib_sym_diff_union{_{l,r},}
+  distrib_inter_sym_diff{_{l,r},}
+  super_distrib_sym_diff_inter{_{l,r},}
+  sym_diff_union
+  {disj,union,partition}_sym_diff_inter
+  sym_diff_cancel_middle
+  sym_diff2
+  sym_diff_triangle_ineq
+  sym_diff_diff_diag_l
+partition
+  partition_sym
+  partition_inter_{l,r}

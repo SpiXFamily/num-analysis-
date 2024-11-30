@@ -1,0 +1,42 @@
+  subset_seq_ext{,'}
+incl_seq
+  incl_seq_equiv_def
+  incl_seq_{refl,antisym,trans}
+same_seq
+  same_seq_equiv_def
+  same_seq_{refl?,sym,trans}
+{in,de}cr_seq
+  {in,de}cr_seq_equiv_def
+  {in,de}cr_seq_le
+  {in,de}cr_finite_seq
+  {union,inter}_finite_id{,',_iff}
+  {incr_seq_union,decr_seq_inter}_finite
+  {in,de}cr_seq_{union,inter,diff}_compat_{l,r}
+disj_seq{,'}
+  disj_seq{,'}_equiv_def
+  disj_seq_equiv
+  disj_finite_seq
+  disj_seq_inter_{l,r}
+  disj_seq'_x_inter_seq
+compl_seq
+  compl_seq_{invol,shift,reg}
+  {incl,same}_compl_seq{',}
+  {in,de}cr_compl_seq
+x_inter_seq
+  x_inter_seq_phi
+{union,inter}_seq
+  {union,inter}_{finite_seq{,'},seq_finite}
+  {union,inter}_seq_monot
+  union_seq_{,l}ub,inter_seq_{,g}lb
+  incl_{union,inter}_seq
+  {union,inter}_seq_{incl,eq}_compat
+  distrib_{union,inter}_{union,inter}_seq_{l,r}
+  distrib_inter_union_seq
+(*distrib_{union_seq_inter,inter_seq_union}_seq*)
+  {in,de}cr_{union,inter}_seq_shift
+  disj_union_seq_{l,r}
+  incl_inter_union_seq
+  compl{,_seq}_{union,inter}_seq
+  diff_{union,inter}_seq_{l,r}
+partition_seq
+  partition_seq_inter{_{l,r},}

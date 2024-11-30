@@ -1,0 +1,13 @@
+Le lemme measurable_fun_plus_alt est utilisé dans LInt_p.
+
+Remplacer sigma_algebra.v par measurable.v qui fait appel à Subset_system.v.
+
+Renommages dans measurable.v :
+measurable_compl -> measurable_compl_rev
+measurable_compl_rev -> measurable_compl
+measurable_union_countable -> measurable_union_seq
+measurable_inter_countable -> measurable_inter_seq
+measurable_gen_open -> measurable_Borel_gen
+Gen_Product -> Gen_Prod
+Gen_Product_is_product_measurable -> measurable_prod
+measurable_Gen_Product_equiv -> measurable_Prod_ext

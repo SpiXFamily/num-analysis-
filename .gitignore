@@ -1,0 +1,10 @@
+.*Makefile.d
+*Makefile*
+.DS_Store
+.*.aux
+*.glob
+*.v.d
+*.vo*
+.lia.cache
+result
+result-*

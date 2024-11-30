@@ -1,0 +1,119 @@
+Ne, wE, wF, Pt, PtC, C, PtD', D', PtD, D, sD, Ud, U, I
+Ptf, PtfC, PtfD', PtfD, Udf, Uf, If   (Umf and Imf are always true)
+Ptc, Udc, Umc, Imc, Uc, Ic
+
+      wE, wF => Ne
+C => I => Ne => wE
+C => U => Ne => wF
+PtD => Ne => wE
+D => Ne => wE
+PtC => wF => wE
+C => wF <=> wE
+C => PtC
+D' => PtD'
+D => PtD
+PtD => PtD'
+I => PtC => PtD
+wF => PtD' => PtC
+wF => D' => C
+C => Ud <=> D'
+     D => D'
+I => D' => D
+     sD => D', Ud
+I => D' => Ud => sD
+C => I => D
+     D => I
+D => Ud => U
+     U => !Ud
+C => U <=> I, D
+U => sD <=> D
+sD => I => U
+
+Pt => !Ptf
+PtC => !PtfC
+PtD => !PtfD
+PtfD => Ne => wE
+PtfC => wF => wE
+C => PtfC
+D' => PtfD'
+D => PtfD
+PtfD => PtfD'
+I => PtfC => PtfD
+wF => PtfD' => PtfC
+If <=> I
+Uf <=> U
+Udf <=> Ud
+Uf => !Udf, !Ud
+C => Uf <=> If
+I => I (U+)  (U+ = finite disjoint unions)
+Ud (U+)
+I => PtfD => D (U+)
+
+Ptc => !Ptf
+Udc => !Udf, !Ud
+Ic => !Imc, !If, !I
+Uc => !Umc, !Udc, !Uf, !Udf, !U, !Ud
+C => Udc => D'
+C => Uc <=> Ic
+C => Umc <=> Imc
+     D' => Udc => Umc
+     Ud => Umc => Udc
+     D => Udc => Uc
+D => Ud => Umc => Uc
+
+P   = Ne + If         => I
+R/2 = wE + I + PtfD   => Ne, If
+R   = Ne + D + Uf     => wE, D', sD, Ud, U, I, Udf, If
+A/2 = R/2 + wF        => Ne, wE, PtfC, PtfD, If
+A   = wE + C + Uf     => Ne, wF, D', D, sD, Ud, U, I, Udf, If
+Mc  = Umc + Imc
+L   = wF + C + Udc    => Ne, wE, D', Ud, Udf, Umc, Imc
+?dR  = Ne + D + U + Ic => wE, D', sD, Ud, I, Udf, Uf, If, Imc
+?sR  = Ne + D + Uc     => wE, D', sD, Ud, U, I, Udf, Uf, If, Udc, Umc
+sA  = A + Uc          => Ne, wE, wF, C, D', D, sD, Ud, U, I,
+                         Udf, Uf, If, Udc, Umc, Imc, Ic
+
+P   <=> Ne + I
+R/2 <=> [Ne | wE] + I + PtfD
+R   <=> [Ne | wE] + [D + U | D + Ud | sD + I | D' + Ud + I]
+A/2 <=> wF + I + [PtfC | PtfD]
+A   <=> [Ne | wE | wF] + C + [U | I]
+    <=> wF + D
+L   <=> wF + D' + Umc
+?dR  <=> [Ne | wE] + D + U + Ic
+?sR  <=> [Ne | wE] + D + Uc
+sA  <=> [Ne | wE | wF] + C + [Uc | Ic]
+
+R/2 => P
+R   => P, R/2           (R(P(g)) = R(g))
+A/2 => P, R/2
+A   => P, R, A/2        (A(P(g)) = A(g), A(R(g)) = A(g))
+L   => Mc               (L(Mc(g)) = L(g))
+?dR  => P, R             (dR(P(g)) = dR(g), dR(R(g)) = dR(g))
+?sR  => P, R             (sR(P(g)) = sR(g), sR(R(g)) = sR(g))
+sA  => P, R, A, Mc, L,  (sA(P(g)) = sA(g), sA(R(g)) = sA(g), sA(A(g)) = sA(g),
+       dR, sR            sA(Mc(g)) = sA(g), sA(L(g)) = sA(g))
+
+R  <= P + sD
+R  <= R/2 + Ud
+A  <= P + C
+A  <= R + [wF | C]
+A  <= A/2 + Ud
+L  <= Mc + wF + D'
+?dR <= R + Ic
+?sR <= R + Uc
+sA <= P + C + [Udc | Umc]
+sA <= R + [wF | C] + [Udc | Umc]
+sA <= A + [Udc | Umc]
+sA <= Mc + wE + C + U
+sA <= L + I
+?sA <= dR + ??
+?sA <= sR + wF
+
+sA <=> P + L <=> A + Mc
+
+L(P) <=> sA(P)       (P c L => sA(P) c L)
+?P(L) <=> sA(L)       (L c P => sA(L) c P)
+
+Mc(A) <=> sA(A)      (A c Mc => sA(A) c Mc)
+?A(Mc) <=> sA(Mc)     (Mc c A => sA(Mc) c A)

@@ -1,0 +1,9 @@
+lim{inf,sup}
+  lim{inf,sup}_{ext,shift}
+  incl_liminf_limsup
+  compl_lim{inf,sup}
+is_lim
+  is_lim_{unique,ext,shift,compl}
+  lim_{in,de}cr_seq
+  {union,inter}_seq_lim
+  lim{inf,sup}_equiv_def

@@ -1,0 +1,46 @@
+variables:
+  CACHIX_CACHE_NAME: coq-cache
+  COQ_VERSION: "8_16"
+default:
+  image:
+    name: "hamelindavid/cachix-flakes-mv"
+  before_script:
+    - (test -d .nix-store && rm -rf /nix/store && mv .nix-store /nix/store) || echo No local cache, this build might be slow if the packages are not on the remote nix binary cache
+    - echo "keep-outputs = true" >> /etc/nix/nix.conf
+    - echo "keep-derivations = true" >> /etc/nix/nix.conf
+    - echo "keep-failed = true" >> /etc/nix/nix.conf
+    - cachix use "$CACHIX_CACHE_NAME"
+    - cachix watch-exec "$CACHIX_CACHE_NAME" -- nix develop .#num-analysis_$COQ_VERSION -c "true"
+    - cachix watch-exec "$CACHIX_CACHE_NAME" -- nix build .#num-analysis_$COQ_VERSION
+  after_script:
+    - echo "~~~~~~~~ COMPILATION COQ ~~~~~~~~~~~~~~~"
+    - nix log .#num-analysis_$COQ_VERSION 
+    - echo "~~~~~~~~ FIN COMPILATION COQ ~~~~~~~~~~~"
+    - mv /nix/store .nix-store 
+  cache:
+    key: nix-store
+    paths:
+      - .nix-store
+
+compile-8_16:
+  variables:
+    COQ_VERSION: "8_16"
+  script:
+    - /bin/true
+    
+
+compile-8_17:
+  variables:
+    COQ_VERSION: "8_17"
+  rules:
+    - when: manual
+  script:
+    - /bin/true
+
+compile-8_18:
+  variables:
+    COQ_VERSION: "8_18"
+  rules:
+    - when: manual
+  script:
+    - /bin/true
